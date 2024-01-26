@@ -9,7 +9,7 @@ async function generateQR(inputValue) {
       throw new Error("Please enter a valid input");
     } else {
       const response = await fetch(
-        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=encodeURI(${inputValue})`
+        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputValue}`
       );
       const qrURL = response.url;
       console.log(qrURL);
